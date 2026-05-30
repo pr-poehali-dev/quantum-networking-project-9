@@ -36,9 +36,9 @@ export const ShinyButton: React.FC<ShinyButtonProps> = ({ children, className, .
       {...props}
       className={cn(
         "relative rounded-lg px-8 py-4 uppercase tracking-wide overflow-hidden font-open-sans-custom text-xs scale-90",
-        "bg-white/20 backdrop-blur-sm border-2 border-white/30",
-        "shadow-[0_0_30px_rgba(255,255,255,0.4),inset_0_0_20px_rgba(255,255,255,0.1)]",
-        "hover:shadow-[0_0_50px_rgba(255,255,255,0.6),inset_0_0_30px_rgba(255,255,255,0.2)]",
+        "bg-emerald-500/30 backdrop-blur-sm border-2 border-emerald-400/50",
+        "shadow-[0_0_30px_rgba(52,211,153,0.4),inset_0_0_20px_rgba(52,211,153,0.1)]",
+        "hover:shadow-[0_0_50px_rgba(52,211,153,0.6),inset_0_0_30px_rgba(52,211,153,0.2)]",
         "transition-all duration-300",
         className,
       )}
@@ -48,7 +48,7 @@ export const ShinyButton: React.FC<ShinyButtonProps> = ({ children, className, .
       <span
         className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%)",
+          background: "linear-gradient(90deg, transparent 0%, rgba(52,211,153,0.6) 50%, transparent 100%)",
           transform: "translateX(var(--x))",
         }}
       />

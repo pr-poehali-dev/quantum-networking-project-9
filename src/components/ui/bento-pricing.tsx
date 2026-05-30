@@ -91,7 +91,7 @@ export function BentoPricing() {
         </div>
         <div className="flex items-center gap-3 p-3">
           <Badge variant="secondary" className="bg-white/10 text-white border-white/20 font-open-sans-custom text-xs">
-            ПРЕМИУМ
+            СЕМЬЯ+
           </Badge>
           <Badge
             variant="outline"
@@ -101,23 +101,23 @@ export function BentoPricing() {
           </Badge>
           <div className="ml-auto">
             <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
-              Подписаться
+              Подключить
             </Button>
           </div>
         </div>
         <div className="flex flex-col p-3 lg:flex-row">
           <div className="pb-2 lg:w-[30%]">
             <span className="font-mono text-3xl font-semibold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              2 000 ₽
+              499 ₽
             </span>
             <span className="text-gray-300 text-xs font-open-sans-custom">/мес</span>
           </div>
           <ul className="text-gray-300 grid gap-2 text-xs lg:w-[70%] font-open-sans-custom">
             {[
-              "2 000 ₽ кредитов включено ежемесячно",
-              "Докупайте кредиты сверх месячного лимита",
-              "5x увеличенный лимит вложений",
-              "Импорт дизайнов из популярных инструментов",
+              "До 6 участников в семье",
+              "Лимиты и цели для каждого участника",
+              "Детальная аналитика и диаграммы расходов",
+              "Уведомления о перерасходе в реальном времени",
             ].map((f, i) => (
               <li key={i} className="flex items-center gap-2">
                 <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
@@ -129,47 +129,49 @@ export function BentoPricing() {
       </div>
 
       <PricingCard
-        titleBadge="СТАРТ"
+        titleBadge="БЕСПЛАТНО"
         priceLabel="0 ₽"
         features={[
-          "500 ₽ кредитов включено ежемесячно",
-          "Деплой приложений в облако",
-          "Визуальное редактирование",
-          "Синхронизация с Git",
+          "2 участника (пара)",
+          "Общий бюджет и расходы",
+          "Базовые категории трат",
+          "История за 3 месяца",
         ]}
         className="lg:col-span-3"
         cta="Начать"
       />
 
       <PricingCard
-        titleBadge="КОМАНДА"
-        priceLabel="3 000 ₽"
-        priceSuffix="/чел/мес"
+        titleBadge="ПАРА"
+        priceLabel="199 ₽"
+        priceSuffix="/мес"
         features={[
-          "3 000 ₽ кредитов на участника ежемесячно",
-          "Единый биллинг и управление командой",
-          "Общие чаты и совместная работа",
+          "2 участника",
+          "Лимиты по категориям",
+          "Совместные цели накоплений",
         ]}
         className="lg:col-span-4"
+        cta="Подключить"
       />
 
       <PricingCard
-        titleBadge="БИЗНЕС"
-        priceLabel="10 000 ₽"
-        priceSuffix="/чел/мес"
-        features={["3 000 ₽ кредитов на участника ежемесячно", "Отключение обучения по умолчанию", "Полный доступ к API"]}
+        titleBadge="СТАНДАРТ"
+        priceLabel="349 ₽"
+        priceSuffix="/мес"
+        features={["До 4 участников", "Роли и права доступа", "Уведомления о перерасходе"]}
         className="lg:col-span-4"
+        cta="Подключить"
       />
 
       <PricingCard
-        titleBadge="КОРПОРАЦИЯ"
+        titleBadge="РАСШИРЕННЫЙ"
         priceLabel="По запросу"
         priceSuffix=""
         features={[
-          "Отключение обучения по умолчанию",
-          "SAML SSO",
-          "Приоритетный доступ",
-          "Персональная поддержка",
+          "Неограниченное число участников",
+          "Интеграция с банками",
+          "Приоритетная поддержка",
+          "Персональный финансовый советник",
         ]}
         className="lg:col-span-8"
         cta="Связаться"

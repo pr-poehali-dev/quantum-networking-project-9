@@ -23,10 +23,11 @@ export function FloatingNavbar() {
                 width="1.75em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title>PromptCraft</title>
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <title>ФинДом</title>
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <polyline points="9 22 9 12 15 12 15 22" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">PromptCraft</span>
+              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">ФинДом</span>
             </div>
           </button>
 
@@ -36,7 +37,7 @@ export function FloatingNavbar() {
               onClick={() => scrollToSection("features")}
               className="text-sm font-open-sans-custom text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              Функции
+              Возможности
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
@@ -48,7 +49,7 @@ export function FloatingNavbar() {
               onClick={() => scrollToSection("about")}
               className="text-sm font-open-sans-custom text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              О нас
+              О сервисе
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -63,7 +64,7 @@ export function FloatingNavbar() {
             size="sm"
             className="bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
           >
-            Начать
+            Попробовать бесплатно
           </Button>
         </div>
       </div>
