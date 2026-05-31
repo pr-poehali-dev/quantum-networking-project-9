@@ -6,7 +6,7 @@ export default function Collections() {
   return (
     <main>
       {/* Header */}
-      <section className="py-20 md:py-28 bg-dk-block border-b border-dk">
+      <section className="py-20 md:py-28 bg-dk-block border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-dk-accent" />
@@ -27,7 +27,7 @@ export default function Collections() {
             {collections.map((col, i) => (
               <div
                 key={col.id}
-                className={`grid md:grid-cols-2 gap-0 group overflow-hidden border border-dk hover:border-dk-accent transition-all duration-300 ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
+                className={`grid md:grid-cols-2 gap-0 group overflow-hidden border border-dk-border hover:border-dk-accent transition-all duration-300 ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
               >
                 <div className={`overflow-hidden aspect-[16/9] md:aspect-auto ${i % 2 !== 0 ? "md:order-2" : ""}`}>
                   <img

@@ -19,6 +19,14 @@ export default {
 		},
 		extend: {
 			colors: {
+				'dk-bg': '#0A0A0A',
+				'dk-block': '#1E1E1E',
+				'dk-accent': '#E85D04',
+				'dk-gold': '#FFB703',
+				'dk-muted': '#B0B0B0',
+				'dk-border': '#333333',
+				'dk-sale': '#8B0000',
+				'dk-anthracite': '#1A1A1A',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

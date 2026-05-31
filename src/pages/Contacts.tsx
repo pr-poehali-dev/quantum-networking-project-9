@@ -22,7 +22,7 @@ export default function Contacts() {
   return (
     <main>
       {/* Header */}
-      <section className="py-20 bg-dk-block border-b border-dk">
+      <section className="py-20 bg-dk-block border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-dk-accent" />
@@ -74,7 +74,7 @@ export default function Contacts() {
                       key={s.label}
                       href={s.href}
                       aria-label={s.label}
-                      className="w-10 h-10 border border-dk flex items-center justify-center text-dk-muted hover:text-white hover:border-dk-accent hover:bg-dk-accent/10 transition-all duration-200"
+                      className="w-10 h-10 border border-dk-border flex items-center justify-center text-dk-muted hover:text-white hover:border-dk-accent hover:bg-dk-accent/10 transition-all duration-200"
                     >
                       <Icon name={s.icon as "Instagram"} size={18} />
                     </a>
@@ -83,7 +83,7 @@ export default function Contacts() {
               </div>
 
               {/* Response time badge */}
-              <div className="mt-10 bg-dk-block border border-dk p-5 flex items-center gap-4">
+              <div className="mt-10 bg-dk-block border border-dk-border p-5 flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
                 <div>
                   <div className="font-heading font-bold text-white text-sm">Быстрый ответ</div>
@@ -115,7 +115,7 @@ export default function Contacts() {
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full bg-dk-block border border-dk text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors"
+                        className="w-full bg-dk-block border border-dk-border text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors"
                         placeholder="Ваше имя"
                       />
                     </div>
@@ -126,7 +126,7 @@ export default function Contacts() {
                         required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full bg-dk-block border border-dk text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors"
+                        className="w-full bg-dk-block border border-dk-border text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors"
                         placeholder="email@example.com"
                       />
                     </div>
@@ -136,7 +136,7 @@ export default function Contacts() {
                     <select
                       value={form.subject}
                       onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                      className="w-full bg-dk-block border border-dk text-white px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors cursor-pointer"
+                      className="w-full bg-dk-block border border-dk-border text-white px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors cursor-pointer"
                     >
                       <option value="">Выберите тему</option>
                       <option value="order">Вопрос о заказе</option>
@@ -153,7 +153,7 @@ export default function Contacts() {
                       rows={5}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full bg-dk-block border border-dk text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors resize-none"
+                      className="w-full bg-dk-block border border-dk-border text-white placeholder-dk-muted px-4 py-3 text-sm focus:outline-none focus:border-dk-accent transition-colors resize-none"
                       placeholder="Ваше сообщение..."
                     />
                   </div>

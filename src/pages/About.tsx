@@ -79,7 +79,7 @@ export default function About() {
               {timeline.map((item, i) => (
                 <div key={item.year} className={`flex gap-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                   <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"} text-left pl-16 md:pl-0`}>
-                    <div className="bg-dk-block border border-dk p-6 hover:border-dk-accent transition-all duration-300 inline-block w-full">
+                    <div className="bg-dk-block border border-dk-border p-6 hover:border-dk-accent transition-all duration-300 inline-block w-full">
                       <div className="font-display text-3xl text-dk-accent mb-2">{item.year}</div>
                       <h3 className="font-heading font-bold text-white text-xl mb-3">{item.title}</h3>
                       <p className="text-dk-muted text-sm leading-relaxed">{item.desc}</p>
@@ -111,7 +111,7 @@ export default function About() {
               { icon: "Leaf", title: "Честность", desc: "100% органический хлопок, прозрачное производство, честные цены. Никаких компромиссов с совестью." },
               { icon: "Users", title: "Сообщество", desc: "Dragon Kingdom — это не просто бренд. Это люди с огнём внутри. Ты один из них." },
             ].map((v) => (
-              <div key={v.title} className="bg-dk-bg border border-dk p-8 text-center group hover:border-dk-accent transition-all duration-300">
+              <div key={v.title} className="bg-dk-bg border border-dk-border p-8 text-center group hover:border-dk-accent transition-all duration-300">
                 <div className="w-14 h-14 bg-dk-accent/10 border border-dk-accent/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-dk-accent/20 transition-colors">
                   <Icon name={v.icon as "Flame"} size={26} className="text-dk-accent" />
                 </div>
@@ -137,7 +137,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="group text-center">
-                <div className="aspect-square overflow-hidden mb-4 border border-dk group-hover:border-dk-accent transition-all duration-300">
+                <div className="aspect-square overflow-hidden mb-4 border border-dk-border group-hover:border-dk-accent transition-all duration-300">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 className="font-heading font-bold text-white text-base">{member.name}</h3>

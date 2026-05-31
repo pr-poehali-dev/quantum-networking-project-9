@@ -65,7 +65,7 @@ export default function Delivery() {
   return (
     <main>
       {/* Header */}
-      <section className="py-20 bg-dk-block border-b border-dk">
+      <section className="py-20 bg-dk-block border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-dk-accent" />
@@ -88,7 +88,7 @@ export default function Delivery() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {deliveryMethods.map((m) => (
-              <div key={m.title} className="bg-dk-block border border-dk p-6 hover:border-dk-accent transition-all duration-300 group">
+              <div key={m.title} className="bg-dk-block border border-dk-border p-6 hover:border-dk-accent transition-all duration-300 group">
                 <div className="w-12 h-12 bg-dk-accent/10 border border-dk-accent/20 flex items-center justify-center mb-5 group-hover:bg-dk-accent/20 transition-colors">
                   <Icon name={m.icon as "Truck"} size={22} className="text-dk-accent" />
                 </div>
@@ -125,7 +125,7 @@ export default function Delivery() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {paymentMethods.map((m) => (
-              <div key={m.title} className="bg-dk-bg border border-dk p-6 flex items-start gap-4 hover:border-dk-accent transition-all duration-300 group">
+              <div key={m.title} className="bg-dk-bg border border-dk-border p-6 flex items-start gap-4 hover:border-dk-accent transition-all duration-300 group">
                 <div className="w-10 h-10 bg-dk-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-dk-accent/20 transition-colors">
                   <Icon name={m.icon as "CreditCard"} size={20} className="text-dk-accent" />
                 </div>
@@ -178,7 +178,7 @@ export default function Delivery() {
                   { icon: "Archive", text: "Хранить в сложенном виде, избегать прямого света" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
-                    <div className="w-8 h-8 bg-dk-block border border-dk flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-dk-block border border-dk-border flex items-center justify-center flex-shrink-0">
                       <Icon name={item.icon as "Droplets"} size={16} className="text-dk-accent" />
                     </div>
                     <span className="text-dk-muted text-sm">{item.text}</span>
@@ -203,7 +203,7 @@ export default function Delivery() {
           </div>
           <div className="space-y-3">
             {faq.map((item) => (
-              <details key={item.q} className="group bg-dk-bg border border-dk hover:border-dk-accent transition-all duration-300">
+              <details key={item.q} className="group bg-dk-bg border border-dk-border hover:border-dk-accent transition-all duration-300">
                 <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                   <span className="font-heading font-bold text-white text-sm pr-4">{item.q}</span>
                   <Icon name="ChevronDown" size={18} className="text-dk-muted flex-shrink-0 group-open:rotate-180 transition-transform duration-300" />

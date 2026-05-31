@@ -35,7 +35,7 @@ export default function Product() {
   return (
     <main>
       {/* Breadcrumb */}
-      <div className="bg-dk-block border-b border-dk py-4">
+      <div className="bg-dk-block border-b border-dk-border py-4">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center gap-2 text-dk-muted text-sm">
           <Link to="/" className="hover:text-white transition-colors">Главная</Link>
           <Icon name="ChevronRight" size={14} />
@@ -51,7 +51,7 @@ export default function Product() {
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
             {/* Gallery */}
             <div className="space-y-4">
-              <div className="aspect-[4/5] overflow-hidden border border-dk">
+              <div className="aspect-[4/5] overflow-hidden border border-dk-border">
                 <img
                   src={product.images[selectedImage]}
                   alt={product.name}
@@ -64,7 +64,7 @@ export default function Product() {
                     <button
                       key={i}
                       onClick={() => setSelectedImage(i)}
-                      className={`w-20 h-20 overflow-hidden border-2 transition-all ${selectedImage === i ? "border-dk-accent" : "border-dk hover:border-dk-muted"}`}
+                      className={`w-20 h-20 overflow-hidden border-2 transition-all ${selectedImage === i ? "border-dk-accent" : "border-dk-border hover:border-dk-muted"}`}
                     >
                       <img src={img} alt="" className="w-full h-full object-cover" />
                     </button>
@@ -107,7 +107,7 @@ export default function Product() {
                     <button
                       key={i}
                       onClick={() => setSelectedColor(i)}
-                      className={`w-8 h-8 border-2 transition-all ${selectedColor === i ? "border-dk-accent scale-110" : "border-dk hover:border-white"}`}
+                      className={`w-8 h-8 border-2 transition-all ${selectedColor === i ? "border-dk-accent scale-110" : "border-dk-border hover:border-white"}`}
                       style={{ backgroundColor: color }}
                       aria-label={`Цвет ${i + 1}`}
                     />
@@ -129,7 +129,7 @@ export default function Product() {
                       className={`min-w-[48px] h-10 px-3 border text-sm font-heading font-bold tracking-wide transition-all ${
                         selectedSize === size
                           ? "border-dk-accent bg-dk-accent text-white"
-                          : "border-dk text-dk-muted hover:border-white hover:text-white"
+                          : "border-dk-border text-dk-muted hover:border-white hover:text-white"
                       }`}
                     >
                       {size}
@@ -157,7 +157,7 @@ export default function Product() {
               </div>
 
               {/* Meta */}
-              <div className="space-y-3 border-t border-dk pt-6">
+              <div className="space-y-3 border-t border-dk-border pt-6">
                 {[
                   { icon: "Tag", label: "Материал", value: product.material },
                   { icon: "Truck", label: "Доставка", value: "2-5 рабочих дней" },
@@ -178,7 +178,7 @@ export default function Product() {
 
       {/* Related */}
       {related.length > 0 && (
-        <section className="py-16 bg-dk-block border-t border-dk">
+        <section className="py-16 bg-dk-block border-t border-dk-border">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <h2 className="font-display text-3xl text-white tracking-wider mb-8">Из той же коллекции</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">

@@ -67,7 +67,7 @@ export default function Customize() {
   return (
     <main>
       {/* Header */}
-      <section className="py-14 bg-dk-block border-b border-dk">
+      <section className="py-14 bg-dk-block border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-dk-gold" />
@@ -90,7 +90,7 @@ export default function Customize() {
                     ? "bg-dk-accent text-white"
                     : step > s.n
                     ? "bg-dk-block border border-dk-accent text-dk-accent cursor-pointer"
-                    : "bg-dk-block border border-dk text-dk-muted cursor-not-allowed"
+                    : "bg-dk-block border border-dk-border text-dk-muted cursor-not-allowed"
                 }`}
               >
                 <span className="w-5 h-5 rounded-full border border-current flex items-center justify-center text-xs">
@@ -117,7 +117,7 @@ export default function Customize() {
                     <button
                       key={item.id}
                       onClick={() => setBase(item)}
-                      className={`border-2 overflow-hidden transition-all text-left ${base.id === item.id ? "border-dk-accent" : "border-dk hover:border-dk-muted"}`}
+                      className={`border-2 overflow-hidden transition-all text-left ${base.id === item.id ? "border-dk-accent" : "border-dk-border hover:border-dk-muted"}`}
                     >
                       <div className="aspect-square overflow-hidden">
                         <img src={item.image} alt={item.label} className="w-full h-full object-cover" />
@@ -141,7 +141,7 @@ export default function Customize() {
                     <button
                       key={c.id}
                       onClick={() => setColor(c)}
-                      className={`border-2 p-4 flex items-center gap-3 transition-all ${color.id === c.id ? "border-dk-accent" : "border-dk hover:border-dk-muted"}`}
+                      className={`border-2 p-4 flex items-center gap-3 transition-all ${color.id === c.id ? "border-dk-accent" : "border-dk-border hover:border-dk-muted"}`}
                     >
                       <div className="w-8 h-8 rounded-full border border-dk-border flex-shrink-0" style={{ backgroundColor: c.hex }} />
                       <span className="text-white font-heading font-bold text-sm">{c.label}</span>
@@ -160,7 +160,7 @@ export default function Customize() {
                     <button
                       key={p.id}
                       onClick={() => setPrint(p)}
-                      className={`w-full border-2 p-4 flex items-center justify-between transition-all ${print.id === p.id ? "border-dk-accent bg-dk-accent/5" : "border-dk hover:border-dk-muted"}`}
+                      className={`w-full border-2 p-4 flex items-center justify-between transition-all ${print.id === p.id ? "border-dk-accent bg-dk-accent/5" : "border-dk-border hover:border-dk-muted"}`}
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${print.id === p.id ? "border-dk-accent" : "border-dk-muted"}`}>
@@ -187,7 +187,7 @@ export default function Customize() {
                       key={s}
                       onClick={() => setSize(s)}
                       className={`min-w-[60px] h-12 px-4 border-2 font-heading font-bold text-sm tracking-wide transition-all ${
-                        size === s ? "border-dk-accent bg-dk-accent text-white" : "border-dk text-dk-muted hover:border-white hover:text-white"
+                        size === s ? "border-dk-accent bg-dk-accent text-white" : "border-dk-border text-dk-muted hover:border-white hover:text-white"
                       }`}
                     >
                       {s}
@@ -208,7 +208,7 @@ export default function Customize() {
                     value={text}
                     onChange={(e) => setText(e.target.value.slice(0, 30))}
                     placeholder="Например: DRAGON SPIRIT"
-                    className="w-full bg-dk-block border border-dk text-white placeholder-dk-muted px-5 py-4 text-lg font-heading tracking-widest uppercase focus:outline-none focus:border-dk-accent transition-colors"
+                    className="w-full bg-dk-block border border-dk-border text-white placeholder-dk-muted px-5 py-4 text-lg font-heading tracking-widest uppercase focus:outline-none focus:border-dk-accent transition-colors"
                   />
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-dk-muted text-sm">{text.length}/30</span>
                 </div>
@@ -246,9 +246,9 @@ export default function Customize() {
 
           {/* Summary */}
           <div>
-            <div className="bg-dk-block border border-dk p-6 sticky top-24">
+            <div className="bg-dk-block border border-dk-border p-6 sticky top-24">
               <h3 className="font-heading font-bold text-white tracking-widest uppercase text-sm mb-6">Ваш заказ</h3>
-              <div className="aspect-square overflow-hidden border border-dk mb-5">
+              <div className="aspect-square overflow-hidden border border-dk-border mb-5">
                 <img src={base.image} alt={base.label} className="w-full h-full object-cover" />
               </div>
               <div className="space-y-3 text-sm mb-6">
@@ -265,7 +265,7 @@ export default function Customize() {
                   </div>
                 ))}
               </div>
-              <div className="border-t border-dk pt-4 flex justify-between items-center">
+              <div className="border-t border-dk-border pt-4 flex justify-between items-center">
                 <span className="text-dk-muted font-heading tracking-wide">Итого</span>
                 <span className="font-display text-3xl text-dk-gold glow-gold">{total.toLocaleString("ru-RU")} ₽</span>
               </div>

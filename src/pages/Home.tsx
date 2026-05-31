@@ -94,7 +94,7 @@ function AboutBrandSection() {
               { num: "6", label: "Коллекций в год" },
               { num: "100%", label: "Натуральный хлопок" },
             ].map((stat) => (
-              <div key={stat.num} className="bg-dk-block border border-dk p-6 group hover:border-dk-accent transition-all duration-300">
+              <div key={stat.num} className="bg-dk-block border border-dk-border p-6 group hover:border-dk-accent transition-all duration-300">
                 <div className="font-display text-4xl text-dk-accent mb-2 group-hover:glow-gold transition-all">{stat.num}</div>
                 <div className="text-dk-muted text-sm font-heading tracking-wide">{stat.label}</div>
               </div>
@@ -291,7 +291,7 @@ function AdvantagesSection() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="bg-dk-bg border border-dk p-6 group hover:border-dk-accent transition-all duration-300 text-center"
+              className="bg-dk-bg border border-dk-border p-6 group hover:border-dk-accent transition-all duration-300 text-center"
             >
               <div className="w-12 h-12 bg-dk-accent/10 border border-dk-accent/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-dk-accent/20 transition-colors">
                 <Icon name={item.icon as "Leaf"} size={22} className="text-dk-accent" />
@@ -415,7 +415,7 @@ function ReviewsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {reviews.map((review) => (
-            <div key={review.name} className="bg-dk-block border border-dk p-6 hover:border-dk-accent transition-all duration-300">
+            <div key={review.name} className="bg-dk-block border border-dk-border p-6 hover:border-dk-accent transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-dk-accent flex items-center justify-center font-bold text-white font-heading">
                   {review.avatar}

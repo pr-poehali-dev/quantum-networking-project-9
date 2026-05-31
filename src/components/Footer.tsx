@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dk-block border-t border-dk">
+    <footer className="bg-dk-block border-t border-dk-border">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -33,7 +33,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-9 h-9 border border-dk flex items-center justify-center text-dk-muted hover:text-white hover:border-dk-accent hover:bg-dk-accent/10 transition-all duration-200"
+                  className="w-9 h-9 border border-dk-border flex items-center justify-center text-dk-muted hover:text-white hover:border-dk-accent hover:bg-dk-accent/10 transition-all duration-200"
                 >
                   <Icon name={social.icon as "Instagram"} size={16} />
                 </a>
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-dk flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-dk-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-dk-muted text-xs">
             © {currentYear} Dragon Kingdom. Все права защищены.
           </p>

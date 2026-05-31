@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-dk-bg/95 backdrop-blur-sm border-b border-dk">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-dk-bg/95 backdrop-blur-sm border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
@@ -94,7 +94,7 @@ export default function Header() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Поиск товаров..."
-                  className="flex-1 bg-dk-block border border-dk text-white placeholder-dk-muted px-4 py-2.5 text-sm focus:outline-none focus:border-dk-accent transition-colors"
+                  className="flex-1 bg-dk-block border border-dk-border text-white placeholder-dk-muted px-4 py-2.5 text-sm focus:outline-none focus:border-dk-accent transition-colors"
                 />
                 <button type="submit" className="btn-primary px-4 py-2.5">
                   <Icon name="Search" size={18} />
@@ -106,7 +106,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden bg-dk-block border-t border-dk">
+          <div className="md:hidden bg-dk-block border-t border-dk-border">
             <nav className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <Link

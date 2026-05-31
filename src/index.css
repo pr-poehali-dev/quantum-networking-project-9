@@ -69,53 +69,17 @@
   }
 }
 
-@layer utilities {
-  .bg-dk-bg {
-    background-color: var(--dk-bg);
-  }
-  .bg-dk-block {
-    background-color: var(--dk-block);
-  }
-  .bg-dk-accent {
-    background-color: var(--dk-accent);
-  }
-  .bg-dk-gold {
-    background-color: var(--dk-gold);
-  }
-  .bg-dk-anthracite {
-    background-color: var(--dk-anthracite);
-  }
-  .bg-dk-sale {
-    background-color: var(--dk-sale);
-  }
-
-  .text-dk-accent {
-    color: var(--dk-accent);
-  }
-  .text-dk-gold {
-    color: var(--dk-gold);
-  }
-  .text-dk-muted {
-    color: var(--dk-muted);
-  }
-  .text-dk-sale {
-    color: #ff4444;
-  }
-
-  .border-dk {
-    border-color: var(--dk-border);
-  }
-
+@layer components {
   .btn-primary {
     @apply bg-dk-accent hover:bg-orange-600 text-white font-semibold px-6 py-3 transition-all duration-200 font-heading text-sm tracking-widest uppercase;
   }
 
   .btn-outline {
-    @apply border border-dk text-white hover:border-dk-accent hover:text-dk-accent font-semibold px-6 py-3 transition-all duration-200 font-heading text-sm tracking-widest uppercase;
+    @apply border border-dk-border text-white hover:border-dk-accent hover:text-dk-accent font-semibold px-6 py-3 transition-all duration-200 font-heading text-sm tracking-widest uppercase;
   }
 
   .card-product {
-    @apply bg-dk-block border border-dk hover:border-dk-accent transition-all duration-300 cursor-pointer group;
+    @apply bg-dk-block border border-dk-border hover:border-dk-accent transition-all duration-300 cursor-pointer group;
   }
 
   .section-title {

@@ -32,7 +32,7 @@ export default function Catalog() {
   return (
     <main>
       {/* Header */}
-      <section className="py-14 bg-dk-block border-b border-dk">
+      <section className="py-14 bg-dk-block border-b border-dk-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center gap-2 text-dk-muted text-sm mb-4">
             <Link to="/" className="hover:text-white transition-colors">Главная</Link>
@@ -47,7 +47,7 @@ export default function Catalog() {
         <div className="flex gap-8">
           {/* Sidebar Filters */}
           <aside className={`w-64 flex-shrink-0 ${filtersOpen ? "block" : "hidden"} md:block`}>
-            <div className="bg-dk-block border border-dk p-6 sticky top-24">
+            <div className="bg-dk-block border border-dk-border p-6 sticky top-24">
               <h3 className="font-heading font-bold text-white tracking-widest uppercase text-sm mb-6">Фильтры</h3>
 
               {/* Collections */}
@@ -96,14 +96,14 @@ export default function Catalog() {
                     type="number"
                     value={priceRange[0]}
                     onChange={(e) => setPriceRange([+e.target.value, priceRange[1]])}
-                    className="w-full bg-dk-bg border border-dk text-white text-xs px-2 py-1.5 focus:outline-none focus:border-dk-accent"
+                    className="w-full bg-dk-bg border border-dk-border text-white text-xs px-2 py-1.5 focus:outline-none focus:border-dk-accent"
                     placeholder="от"
                   />
                   <input
                     type="number"
                     value={priceRange[1]}
                     onChange={(e) => setPriceRange([priceRange[0], +e.target.value])}
-                    className="w-full bg-dk-bg border border-dk text-white text-xs px-2 py-1.5 focus:outline-none focus:border-dk-accent"
+                    className="w-full bg-dk-bg border border-dk-border text-white text-xs px-2 py-1.5 focus:outline-none focus:border-dk-accent"
                     placeholder="до"
                   />
                 </div>
@@ -128,7 +128,7 @@ export default function Catalog() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-dk-block border border-dk text-white text-sm px-4 py-2 focus:outline-none focus:border-dk-accent cursor-pointer"
+                className="bg-dk-block border border-dk-border text-white text-sm px-4 py-2 focus:outline-none focus:border-dk-accent cursor-pointer"
               >
                 <option value="default">По умолчанию</option>
                 <option value="hits">Хиты сезона</option>
